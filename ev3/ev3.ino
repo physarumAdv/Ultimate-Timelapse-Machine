@@ -73,13 +73,20 @@ void loop() {
             SH_Completion_Dont_Wait,
             SH_Next_Action_Brake);
     
-  
-//    roll.write(r);
-//    yaw.write(y);
-//    pitch.write(p);
-//    p -= 0.3;
-//    Serial.println(p);
-//    y += 0.1;
+    evshield.bank_b.motorRunDegrees(SH_Motor_Both, 
+            SH_Direction_Forward, 
+            50,
+            1200,
+            SH_Completion_Dont_Wait,
+            SH_Next_Action_Brake);
+            
+    delay(1);
+//    evshield.bank_b.motorRunDegrees(SH_Motor_Both, 
+//            SH_Direction_Reverse, 
+//            30,
+//            100,
+//            SH_Completion_Dont_Wait,
+//            SH_Next_Action_Brake);
         
     delay(480000 / K);
 }
